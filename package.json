@@ -1,0 +1,23 @@
+{
+  "name": "my-typescripts",
+  "version": "1.0.0",
+  "description": "Getting started with TypeScripts",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshivj/my-typescripts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshivj/my-typescripts/issues"
+  },
+  "homepage": "https://github.com/joshivj/my-typescripts#readme",
+  "devDependencies": {
+    "lite-server": "^2.5.4"
+  }
+}
