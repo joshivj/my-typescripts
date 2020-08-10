@@ -1,3 +1,4 @@
+export {};
 // const person : {
 //     name: string;
 //     age: number;
@@ -34,7 +35,7 @@ if (person.role == Role.READ_ONLY){
 }
 
 // person.role.push('a'); // TS can't catch this
-person.role[0] = 55555;
+person.role = Role.ADMIN;
 
 
 console.log(person);
