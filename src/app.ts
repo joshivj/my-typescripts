@@ -1,19 +1,41 @@
-let userName = 'John';
+interface Person {
+    name?: string,
+    age: number,
+    greet(phrase: string):void;
+}
 
-console.log('hello ' + userName);
+// const user: Person = {
+//     name: 'John',
+//     age: 22,
+//     greet(phrase: string) {
+//         console.log(`${phrase}! ${this.name}`);
+//     }
+// }
+// user.greet('Good Morning')
 
-const button = document.querySelector('button');
+class PersonDetails implements Person {
+    name?: string;
+    age: number;
 
-function clickHandler(message: string){
-    // let userRole = 'Admin';
-    console.log('alert happend ---'+ message);
-    if (message == 'Auditor'){
-        return 'Auditor';
+    constructor(name?: string, age: number = 0){
+        if(this.name) {
+            this.name = name;
+        }
+        
+        this.age = age;
     }
-    return;
+
+    greet(phrase: string) {
+        if (this.name) {
+            console.log(`${phrase}! ${this.name} - it seems your age is ${this.age}.`);
+        }
+        else {
+            console.log('Name NOT FOUND');
+        }
+        
+    }
 }
 
-if(button){
-    button.addEventListener('click', clickHandler.bind('null', userName));
-}
+const user = new PersonDetails();
+user.greet('Good Evening')
 
